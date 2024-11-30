@@ -10,9 +10,9 @@ import (
 
 func TestParts(t *testing.T) {
 	tests := []struct {
-		want  int64
+		want  int
 		input string
-		fn    func(string) int64
+		fn    func(string) int
 	}{
 		{
 			want:  0,

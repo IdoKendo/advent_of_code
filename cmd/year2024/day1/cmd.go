@@ -13,12 +13,11 @@ var Cmd = &cobra.Command{
 	Long:  "day1",
 	Run: func(cmd *cobra.Command, args []string) {
 		execute(cmd.Parent().Name(), cmd.Name())
-
 	},
 }
 
 func execute(parent, command string) {
-	content, err := os.ReadFile(fmt.Sprintf("cmd/year%s/%s/1.txt", parent, command))
+	content, err := os.ReadFile(fmt.Sprintf("cmd/year%s/%s/input1.txt", parent, command))
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
@@ -27,7 +26,7 @@ func execute(parent, command string) {
 	result := Part1(string(content))
 	fmt.Println("Part 1 result: ", result)
 
-	content, err = os.ReadFile(fmt.Sprintf("cmd/year%s/%s/2.txt", parent, command))
+	content, err = os.ReadFile(fmt.Sprintf("cmd/year%s/%s/input2.txt", parent, command))
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
@@ -37,10 +36,10 @@ func execute(parent, command string) {
 	fmt.Println("Part 2 result: ", result)
 }
 
-func Part1(string) int64 {
-	return int64(0)
+func Part1(string) int {
+	return 0
 }
 
-func Part2(string) int64 {
-	return int64(0)
+func Part2(string) int {
+	return 0
 }
