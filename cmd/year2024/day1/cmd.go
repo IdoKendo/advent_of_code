@@ -2,7 +2,11 @@ package day1
 
 import (
 	"fmt"
+	"math"
 	"os"
+	"slices"
+	"strconv"
+	"strings"
 
 	"github.com/spf13/cobra"
 )
@@ -36,10 +40,42 @@ func execute(parent, command string) {
 	fmt.Println("Part 2 result: ", result)
 }
 
-func Part1(string) int {
-	return 0
+func Part1(input string) int {
+	lines := strings.Split(input, "\n")
+	lines = lines[:len(lines)-1]
+	left := make([]int, len(input))
+	right := make([]int, len(input))
+	result := 0
+	for i, line := range lines {
+		locations := strings.Split(line, "   ")
+		left[i], _ = strconv.Atoi(locations[0])
+		right[i], _ = strconv.Atoi(locations[1])
+	}
+	slices.Sort(left)
+	slices.Sort(right)
+	for i := range left {
+		result += int(math.Abs(float64(left[i] - right[i])))
+	}
+
+	return result
 }
 
-func Part2(string) int {
-	return 0
+func Part2(input string) int {
+	lines := strings.Split(input, "\n")
+	lines = lines[:len(lines)-1]
+	appearances := make(map[int]int)
+	similarities := make(map[int]int)
+	result := 0
+	for _, line := range lines {
+		locations := strings.Split(line, "   ")
+		l, _ := strconv.Atoi(locations[0])
+		r, _ := strconv.Atoi(locations[1])
+		appearances[l]++
+		similarities[r]++
+	}
+	for key, val := range appearances {
+		result += key * val * similarities[key]
+	}
+
+	return result
 }
