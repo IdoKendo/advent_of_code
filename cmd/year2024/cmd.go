@@ -6,6 +6,7 @@ import (
 
 	"github.com/idokendo/aoc/cmd/year2024/day1"
 	"github.com/idokendo/aoc/cmd/year2024/day2"
+	"github.com/idokendo/aoc/cmd/year2024/day3"
 	"github.com/spf13/cobra"
 )
 
@@ -25,4 +26,5 @@ func execute() {
 func init() {
 	Cmd.AddCommand(day1.Cmd)
 	Cmd.AddCommand(day2.Cmd)
+	Cmd.AddCommand(day3.Cmd)
 }
