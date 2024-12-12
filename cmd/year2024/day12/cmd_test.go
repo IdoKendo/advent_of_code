@@ -15,13 +15,43 @@ func TestParts(t *testing.T) {
 		fn    func(string) int
 	}{
 		{
-			want:  0,
+			want:  140,
 			input: "test1.txt",
 			fn:    day12.Part1,
 		},
 		{
-			want:  0,
+			want:  772,
+			input: "test1b.txt",
+			fn:    day12.Part1,
+		},
+		{
+			want:  1930,
+			input: "test1c.txt",
+			fn:    day12.Part1,
+		},
+		{
+			want:  80,
 			input: "test2.txt",
+			fn:    day12.Part2,
+		},
+		{
+			want:  436,
+			input: "test2b.txt",
+			fn:    day12.Part2,
+		},
+		{
+			want:  236,
+			input: "test2c.txt",
+			fn:    day12.Part2,
+		},
+		{
+			want:  368,
+			input: "test2d.txt",
+			fn:    day12.Part2,
+		},
+		{
+			want:  1206,
+			input: "test2e.txt",
 			fn:    day12.Part2,
 		},
 	}
