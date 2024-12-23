@@ -20,6 +20,8 @@ import (
 	"github.com/idokendo/aoc/cmd/year2024/day21"
 	"github.com/idokendo/aoc/cmd/year2024/day22"
 	"github.com/idokendo/aoc/cmd/year2024/day23"
+	"github.com/idokendo/aoc/cmd/year2024/day24"
+	"github.com/idokendo/aoc/cmd/year2024/day25"
 	"github.com/idokendo/aoc/cmd/year2024/day3"
 	"github.com/idokendo/aoc/cmd/year2024/day4"
 	"github.com/idokendo/aoc/cmd/year2024/day5"
@@ -67,4 +69,6 @@ func init() {
 	Cmd.AddCommand(day21.Cmd)
 	Cmd.AddCommand(day22.Cmd)
 	Cmd.AddCommand(day23.Cmd)
+	Cmd.AddCommand(day24.Cmd)
+	Cmd.AddCommand(day25.Cmd)
 }
