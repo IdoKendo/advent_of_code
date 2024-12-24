@@ -10,17 +10,22 @@ import (
 
 func TestParts(t *testing.T) {
 	tests := []struct {
-		want  int
+		want  string
 		input string
-		fn    func(string) int
+		fn    func(string) string
 	}{
 		{
-			want:  0,
+			want:  "4",
 			input: "test1.txt",
 			fn:    day24.Part1,
 		},
 		{
-			want:  0,
+			want:  "2024",
+			input: "test1b.txt",
+			fn:    day24.Part1,
+		},
+		{
+			want:  "z00,z01,z02,z05",
 			input: "test2.txt",
 			fn:    day24.Part2,
 		},
