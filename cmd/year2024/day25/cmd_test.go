@@ -15,7 +15,7 @@ func TestParts(t *testing.T) {
 		fn    func(string) int
 	}{
 		{
-			want:  0,
+			want:  3,
 			input: "test1.txt",
 			fn:    day25.Part1,
 		},
