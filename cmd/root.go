@@ -8,6 +8,7 @@ import (
 	"strings"
 	"text/template"
 
+	"github.com/idokendo/aoc/cmd/year2023"
 	"github.com/idokendo/aoc/cmd/year2024"
 	"github.com/idokendo/aoc/cmd/year2025"
 	"github.com/idokendo/aoc/templates"
@@ -199,6 +200,7 @@ func Execute() {
 
 func init() {
 	rootCmd.AddCommand(bootstrapCmd)
+	rootCmd.AddCommand(year2023.Cmd)
 	rootCmd.AddCommand(year2024.Cmd)
 	rootCmd.AddCommand(year2025.Cmd)
 }
