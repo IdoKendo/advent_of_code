@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/idokendo/aoc/cmd/year2023"
 	"github.com/idokendo/aoc/cmd/year2024"
 	"github.com/spf13/cobra"
 )
@@ -22,5 +23,6 @@ func Execute() {
 }
 
 func init() {
+	rootCmd.AddCommand(year2023.Cmd)
 	rootCmd.AddCommand(year2024.Cmd)
 }
