@@ -1,0 +1,26 @@
+package year{{.Year}}
+
+import (
+	"fmt"
+	"os"
+
+	"github.com/idokendo/aoc/cmd/year{{.Year}}/day{{.Day}}"
+	"github.com/spf13/cobra"
+)
+
+var Cmd = &cobra.Command{
+	Use:   "{{.Year}}",
+	Short: "{{.Year}}",
+	Long:  "{{.Year}}",
+}
+
+func execute() {
+	if err := Cmd.Execute(); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
+	}
+}
+
+func init() {
+	Cmd.AddCommand(day{{.Day}}.Cmd)
+}

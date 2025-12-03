@@ -25,3 +25,8 @@ Run the actual file:
 ```sh
 go run main.go 2024 day1
 ```
+
+Add scaffolding for solving a new day:
+```sh
+go run main.go bootstrap 2024 2 && go fmt ./...
+```
