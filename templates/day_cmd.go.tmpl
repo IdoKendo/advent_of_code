@@ -17,7 +17,7 @@ var Cmd = &cobra.Command{
 }
 
 func execute(parent, command string) {
-	content, err := os.ReadFile(fmt.Sprintf("cmd/year%%s/%%s/input1.txt", parent, command))
+	content, err := os.ReadFile(fmt.Sprintf("cmd/year%s/%s/input1.txt", parent, command))
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
@@ -26,7 +26,7 @@ func execute(parent, command string) {
 	result := Part1(string(content))
 	fmt.Println("Part 1 result: ", result)
 
-	content, err = os.ReadFile(fmt.Sprintf("cmd/year%%s/%%s/input2.txt", parent, command))
+	content, err = os.ReadFile(fmt.Sprintf("cmd/year%s/%s/input2.txt", parent, command))
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
