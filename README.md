@@ -1,32 +1,47 @@
-# Advent Of Code
+# Advent of Code Solutions
 
-> My solutions for the puzzles of Advent of Code
+> My solutions for the Advent of Code programming puzzles.
 
-# Advent Of Code
+## About Advent of Code
 
-[Advent Of Code](https://adventofcode.com/2023) is an event of programming puzzles,
-more info can be found in the about section of the site!
+[Advent of Code](https://adventofcode.com/) is an annual event featuring programming puzzles released
+daily from December 1st to ~~25th~~ 12th. You can read more info in the about section of the site.
 
-I am participating in the event casually. Let me know if I did something
-inefficient, or I could've done something better, I want to learn!
+This repository contains my solutions. I'm participating casually and always
+looking to improve my skills — feel free to suggest optimizations or better approaches!
 
-# How to run
+## Project Structure
 
-I created this project using [Cobra](https://github.com/spf13/cobra)
-so that it's easy to create new days without having to work hard to prepare it
-all in advance and also easy to run, e.g.:
+- `cmd/year*/day*/`: Solutions for puzzles
+- `templates/`: Code templates for generating new day scaffolding
+- Each day directory contains:
+  - `cmd.go`: Main solution implementation
+  - `cmd_test.go`: Unit tests, as given by the puzzle description
+  - `test1.txt`, `test2.txt`: Unit test input files
+  - `input1.txt`, `input2.txt`: Actual input files
 
-Run the test:
-```sh
+## Setup
+
+Ensure you have Go installed. Clone the repository and navigate to the project directory.
+
+## Usage
+
+This project uses [Cobra](https://github.com/spf13/cobra) for CLI commands.
+
+### Running Tests
+
+```bash
 go test ./cmd/year2024/day1/...
 ```
 
-Run the actual file:
-```sh
+### Running Solutions
+
+```bash
 go run main.go 2024 day1
 ```
 
-Add scaffolding for solving a new day:
-```sh
+### Bootstrapping New Days
+
+```bash
 go run main.go bootstrap 2024 2 && go fmt ./...
 ```
