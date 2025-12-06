@@ -1,10 +1,10 @@
-package day6_test
+package day7_test
 
 import (
 	"os"
 	"testing"
 
-	"github.com/idokendo/aoc/cmd/year2025/day6"
+	"github.com/idokendo/aoc/cmd/year2025/day7"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -15,14 +15,14 @@ func TestParts(t *testing.T) {
 		fn    func(string) int
 	}{
 		{
-			want:  4277556,
+			want:  0,
 			input: "test1.txt",
-			fn:    day6.Part1,
+			fn:    day7.Part1,
 		},
 		{
-			want:  3263827,
+			want:  0,
 			input: "test2.txt",
-			fn:    day6.Part2,
+			fn:    day7.Part2,
 		},
 	}
 
