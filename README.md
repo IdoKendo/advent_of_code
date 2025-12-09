@@ -45,3 +45,14 @@ go run main.go 2024 day1
 ```bash
 go run main.go bootstrap 2024 2 && go fmt ./...
 ```
+
+## Profiling
+
+The project includes CPU profiling support in `main.go` using Go's `runtime/pprof`. To profile a solution:
+
+1. Run the command: `go run main.go <year> <day>`
+2. This generates `cpu.prof` in the project root.
+3. Analyze with: `go tool pprof cpu.prof`
+4. In the pprof shell, use `top` to view hotspots or `web` for a visual graph (requires Graphviz).
+
+Profiling helps identify performance bottlenecks, such as in complex algorithms or data structures.

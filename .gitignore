@@ -22,3 +22,6 @@ go.work
 
 # puzzle input files
 input*.txt
+
+# Profiling Output
+*.prof
