@@ -15,12 +15,12 @@ func TestParts(t *testing.T) {
 		fn    func(string) int
 	}{
 		{
-			want:  0,
+			want:  7,
 			input: "test1.txt",
 			fn:    day10.Part1,
 		},
 		{
-			want:  0,
+			want:  33,
 			input: "test2.txt",
 			fn:    day10.Part2,
 		},
